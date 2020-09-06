@@ -1,0 +1,88 @@
+html {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+	margin: 0;
+}
+div, section, header, footer, p, h1, h2 {
+	box-sizing: border-box;
+}
+a {
+	color: royalblue;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.global-width{
+	max-width:620px;
+	margin:0 auto; 
+	padding:0 1rem;
+}
+.scroll-graphic{
+	position: sticky;
+	top:0;
+	height:100vh;
+	overflow-x: hidden;
+}
+.graphic-item{
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	/* 처음에 opacity가 0이고, 스크롤에 따라 .visible을 붙인 애들만 1로 바뀜 */
+	opacity: 0;
+	transition:0.5s;
+	will-change: opacity;
+	/*미리 바뀔 거라고 선언*/
+}
+
+.visible {
+	opacity: 1;
+}
+
+.scene-img{
+	max-height: 100vh;
+	margin:0 auto;
+}
+.scroll-text{
+	position: relative;
+	padding-bottom:1px
+}
+
+.step{
+	margin-bottom:60vh;
+	padding:0.5rem 1rem;
+	border-radius: 10px;
+	background:rgba(255,255,255,0.8);
+	box-shadow: rgba(0,0,0,0.3) 0 0 3px;
+}
+
+.bird{
+	position: absolute;
+	left:0;
+	bottom:70%;
+	width:100px;
+	/* 100% 해당요소 크기만큼 왼쪽 */
+	transform: translateX(-100%);
+	/* 재생시간, 지연시간, 재생스타일 */
+	transition:2s 0.5s linear;
+}
+
+[data-index="5"] .bird{
+	left:30%;
+	bottom:30%;
+}
+.global-footer{
+	padding:2rem 0;
+	text-align: center;
+}
+
+.strikethrough{
+	text-decoration-line: line-through;
+}
